@@ -862,6 +862,8 @@ const controls = {
         return value === 1 ? i18n.get('normal', this.config) : `${value}&times;`;
 
       case 'quality':
+        if (t === 0) return "Auto";
+        
         if (is.number(value)) {
           const label = i18n.get(`qualityLabel.${value}`, this.config);
 
